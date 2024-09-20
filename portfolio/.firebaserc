@@ -1,0 +1,8 @@
+{
+  "projects": {
+    "prod": "panipak-portfolio"
+  },
+  "targets": {},
+  "etags": {},
+  "dataconnectEmulatorConfig": {}
+}

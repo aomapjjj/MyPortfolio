@@ -1,0 +1,43 @@
+[
+{
+    "Id":"1",
+    "img":"/img/Integrated/login.png",
+    "name":"IntegratedProject IT KradanKanban",
+    "description":"The Integrated Project focuses on integrating knowledge from various domains into a multi-tier architecture system. It requires analyzing and designing based on project requirements while utilizing the technical concepts learned. The tech stack includes Vue.js for the frontend, Java Spring Boot for the backend, MySQL for the database, and GitHub Workflow with Docker Compose for deployment. My primary responsibility is frontend development, with secondary roles in fixing bugs, designing the database, and setting up CI/CD.",
+    "responsibility":"Full-stack developer",
+    "year":"2024",
+    "repo":"https://github.com/AomAPJJJ/Integrated-Project",
+    "website":"https://intproj23.sit.kmutt.ac.th/sj3/login"
+    
+},
+{
+    "Id":"2",
+    "img":"/img/BingoGame/hompagebingo.png",
+    "name":"Vue Project I WabiSabi BingoGame",
+    "description":"This project is a practice in using basic Vue commands. My group created a bingo game by applying the knowledge from class to develop the game as comprehensively as possible, without using any other libraries.",
+    "responsibility":"Frontend developer",
+    "year":"2024",
+    "repo":"https://github.com/aomapjjj/PROJECT1-SEC-1-WabiSabi",
+    "website":"https://effulgent-muffin-e95471.netlify.app/"
+},
+{
+    "Id":"3",
+    "img":"/img/databaseProJ/db2.png",
+    "name":"Project name: Zoo management system",
+    "description":"This project will focus on database design. Our group has chosen to manage the database of a zoo by creating our own Business Requirements. This is based on a special user within a database that is used by the database management system for administrative purposes and to ensure the proper functioning of the database.",
+    "responsibility":"Database Designer",
+    "year":"2023",
+    "website":"https://docs.google.com/document/d/1To2bTkj42_lIM-9E7K2Q_u3R3QSj3lxrNowXn_XM35Y/edit#heading=h.eq7ucit01rar"
+},
+{
+    "Id":"4",
+    "img":"/img/ui/figma.png",
+    "name":"INT104 User Experience Design UI Designer",
+    "description":"This project will involve designing a prototype of the ACASBY application, which will assist users in matching and selecting clothing. The system features a 3D interface with a total of 9 sizes, including XXS, XS, S, M, L, XL, 2XL, 3XL, and 4XL, allowing users to choose their clothing size by specifying their measurements according to the different size categories. Additionally, it will compile a diverse range of clothing products in various styles from brands in Thailand, making it more convenient for people in the country to shop for local clothing.",
+    "responsibility":"UI designer",
+    "year":"2022",
+    "website":"https://www.figma.com/design/DPVE5r62cAe35e9pyqGep4/ACASBY?node-id=0-1&t=bg0AnRRw27Cp0Oqp-1"
+}
+
+
+]

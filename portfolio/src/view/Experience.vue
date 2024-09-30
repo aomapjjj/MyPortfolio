@@ -1,220 +1,106 @@
 <script setup>
+import {ref , watch} from 'vue'
 import Navbar from "@/components/Navbar.vue"
 import ExperienceTimeLine from "@/components/ExperienceTimeLine.vue"
 import Github from "@/components/icons/Github.vue"
 import Figma from "@/components/icons/Figma.vue"
-import Mysql from "@/components/icons/Mysql.vue";
+import Mysql from "@/components/icons/Mysql.vue"
+import experiences from "../../data/experiences.json"
+import Modal from '@/components/Modal.vue'
+
+const searchByProjectName = ref('')
+const selectedProjectId = ref(null)
+
+const originalProjectName = experiences
+const filteredExperiences = ref([...originalProjectName])
+watch(searchByProjectName, () => {
+  filteredExperiences.value = originalProjectName.filter((project) =>
+    project.name.toLowerCase().includes(searchByProjectName.value.toLowerCase())
+  )
+})
+
+const openModal = ref(false)
+
+const clickToOpenModalById = (id) =>{
+  selectedProjectId.value = id
+  openModal.value = true
+}
+
+
+
+
 </script>
 
+
+
 <template>
-  <div class="bg-black h-screen">
+  <div class="bg-gray-100 h-full min-h-screen">
     <Navbar />
-    <section>
-      <div class="bg-black text-white py-8">
-        <div
-          class="container mx-auto flex flex-col items-start md:flex-row my-12 md:my-24"
-        >
-          <div
-            class="flex flex-col w-full sticky md:top-36 lg:w-1/3 mt-2 md:mt-12 px-8"
-          >
-            <p class="ml-2 text-indigo-600 uppercase tracking-loose">
-              2022-2024
-            </p>
-            <p
-              class="text-3xl md:text-4xl leading-normal md:leading-relaxed mb-2"
+    <div class="flex items-center justify-center lg:h-screen py-16">
+      
+      <div 
+        class="w-11/12 sm:w-11/12 md:w-8/12 lg:w-6/12 bg-white p-6 rounded-lg shadow-sm mb-24 "
+      >
+        <div class="w-full flex justify-between items-center p-3">
+          <h2 class="text-xl font-semibold">My Project</h2>
+        </div>
+        <div class="w-full flex justify-center p-1 mb-4">
+          <div class="relative w-full">
+            <input
+              v-model="searchByProjectName"
+              type="text"
+              class="w-full bg-white py-2 pl-10 pr-4 rounded-lg focus:outline-none border-2 border-gray-100 focus:border-black transition-colors duration-300"
+              placeholder="Project name"
+            />
+            <div
+              class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none"
             >
-              EXPERIENCE
-            </p>
-            <p class="text-sm md:text-base text-gray-50 mb-4">
-              My university experience has been enriched <br> by hands-on projects and real-world problem-solving
-            </p>
-            <a
-              href="#"
-              class="bg-transparent mr-auto hover:bg-indigo-600 text-indigo-600 hover:text-white rounded shadow hover:shadow-lg py-2 px-4 border border-indigo-600 hover:border-transparent"
-            >
-              Explore Now</a
-            >
-          </div>
-          <div class="ml-0 md:ml-12 lg:w-2/3 sticky">
-            <div class="container mx-auto w-full h-full">
-              <div class="relative wrap overflow-hidden p-10 h-full">
-                <div
-                  class="border-2-2 border-blue-555 absolute h-full border"
-                  style="right: 50%; border: 2px solid #ffff; border-radius: 1%"
-                ></div>
-                <div
-                  class="border-2-2 border-blue-555 absolute h-full border"
-                  style="left: 50%; border: 2px solid #ffff; border-radius: 1%"
-                ></div>
-                <div
-                  class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline"
-                >
-                  <div class="order-1 w-5/12"></div>
-                  <div class="order-1 w-5/12 px-1 py-4 text-left">
-                    <ExperienceTimeLine>
-                      <template #image>
-                        <img src="/img/Integrated/login.png" alt="Integrated" />
-                      </template>
-                      <template #type>Dev</template>
-                      <template #year>2024</template>
-                      <template #header>
-                        <a
-                          href="https://intproj23.sit.kmutt.ac.th/sj3/login"
-                          target="_blank"
-                          >IntegratedProjectI IT KradanKanban</a
-                        ></template
-                      >
-                      <template #description>มาเรียบเรียงคำ</template>
-                      <template #responsibilities>
-                        Full-stack developers</template
-                      >
-
-                      <template #github
-                        ><a
-                          class="flex flex-row gap-2 items-center"
-                          href="https://github.com/AomAPJJJ/Integrated-Project"
-                          target="_blank"
-                        >
-                          <Github /> </a
-                      ></template>
-                    </ExperienceTimeLine>
-                  </div>
-                </div>
-                <div
-                  class="mb-8 flex justify-between items-center w-full right-timeline"
-                >
-                  <div class="order-1 w-5/12"></div>
-                  <div class="order-1 w-5/12 px-1 py-4 text-left">
-                    <ExperienceTimeLine>
-                      <template #image>
-                        <img
-                          src="/img/BingoGame/hompagebingo.png"
-                          alt="Bingo"
-                        />
-                      </template>
-                      <template #type>Dev</template>
-                      <template #year>2024</template>
-                      <template #header>
-                        <a
-                          href="https://effulgent-muffin-e95471.netlify.app/"
-                          target="_blank"
-                          >Vue Project I <br />
-                          WabiSabi BingoGame</a
-                        >
-                      </template>
-                      <template #description>มาเรียบเรียงคำ</template>
-                      <template #responsibilities> Frontend developer</template>
-
-                      <template #github
-                        ><a
-                          class="flex flex-row gap-2 items-center"
-                          href="https://github.com/aomapjjj/PROJECT1-SEC-1-WabiSabi"
-                          target="_blank"
-                        >
-                          <Github /> </a
-                      ></template>
-                    </ExperienceTimeLine>
-                  </div>
-                </div>
-                <div
-                  class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline"
-                >
-                  <div class="order-1 w-5/12"></div>
-                  <div class="order-1 w-5/12 px-1 py-4 text-left">
-                    <ExperienceTimeLine>
-                      <template #image>
-                        <img src="/img/ux/ux.png" alt="Ux" />
-                      </template>
-                      <template #type>UX</template>
-                      <template #year>2023</template>
-                      <template #header>
-                        <a
-                          href="https://www.sit.kmutt.ac.th/blog/news_and_activities/ux-workshop-%E0%B8%AD%E0%B8%AD%E0%B8%81%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%A1%E0%B8%B2%E0%B8%81%E0%B8%81%E0%B8%A7%E0%B9%88%E0%B8%B2%E0%B9%81%E0%B8%84%E0%B9%88%E0%B8%AD/"
-                          target="_blank"
-                          >Digital Experience Strategy</a
-                        >
-                      </template>
-                      <template #description
-                        >SIT KMUTT โดย ดร. อันฮวา นิลรัตน์ศิริกุล ร่วมกับบริษัท
-                        ยูเอ็กซ์แอสโซซิเอชัน จำกัด จัด Workshop "Digital
-                        Experience Strategy" ให้ความรู้ด้าน UX Design
-                        โดยมีวิทยากรจากบริษัท ยูเอ็กซ์แอสโซซิเอชัน จำกัด
-                        เป็นเวลา 11 สัปดาห์</template
-                      >
-                    </ExperienceTimeLine>
-                  </div>
-                </div>
-                <div
-                  class="mb-8 flex justify-between items-center w-full right-timeline"
-                >
-                  <div class="order-1 w-5/12"></div>
-                  <div class="order-1 w-5/12 px-1 py-4 text-left">
-                    <ExperienceTimeLine>
-                      <template #image>
-                        <img src="/img/databaseProJ/db.png" alt="DB" />
-                      </template>
-                      <template #type>Database</template>
-                      <template #year>2023</template>
-                      <template #header>
-                        <a
-                          href="https://docs.google.com/document/d/1To2bTkj42_lIM-9E7K2Q_u3R3QSj3lxrNowXn_XM35Y/edit#heading=h.eq7ucit01rar"
-                          target="_blank"
-                          >Project name: Zoo
-                          management system
-                        </a></template
-                      >
-                      <template #description>มาเรียบเรียงคำ</template>
-                      <template #responsibilities> Database Designer </template>
-
-                      <template #github
-                        ><a
-                          class="flex flex-row gap-2 items-center"
-                          href="https://docs.google.com/document/d/1To2bTkj42_lIM-9E7K2Q_u3R3QSj3lxrNowXn_XM35Y/edit#heading=h.eq7ucit01rar"
-                          target="_blank"
-                        >
-                          <Mysql /> </a
-                      ></template>
-                    </ExperienceTimeLine>
-                  </div>
-                </div>
-                <div
-                  class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline"
-                >
-                  <div class="order-1 w-5/12"></div>
-                  <div class="order-1 w-5/12 px-1 py-4 text-left">
-                    <ExperienceTimeLine>
-                      <template #image>
-                        <img src="/img/ui/figma.png" alt="Ui" />
-                      </template>
-                      <template #type>UI</template>
-                      <template #year>2022</template>
-                      <template #header>
-                        <a
-                          href="https://www.figma.com/design/DPVE5r62cAe35e9pyqGep4/ACASBY?node-id=0-1&t=bg0AnRRw27Cp0Oqp-1"
-                          target="_blank"
-                          >INT104 User Experience Design UI Designer</a
-                        ></template
-                      >
-                      <template #description>มาเรียบเรียงคำ</template>
-                      <template #responsibilities> UI designer</template>
-
-                      <template #github
-                        ><a
-                          class="flex flex-row gap-2 items-center"
-                          href="https://www.figma.com/design/DPVE5r62cAe35e9pyqGep4/ACASBY?node-id=0-1&t=bg0AnRRw27Cp0Oqp-1"
-                          target="_blank"
-                        >
-                          <Figma /> </a
-                      ></template>
-                    </ExperienceTimeLine>
-                  </div>
-                </div>
-              </div>
+              <svg
+                class="w-4 h-4 text-gray-800 dark:text-white"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+                />
+              </svg>
             </div>
           </div>
         </div>
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-4"
+        >
+          <ExperienceTimeLine @click="clickToOpenModalById(item.Id)"
+            v-for="(item, index) in filteredExperiences"
+            :key="item.Id"
+          >
+            <template #header>
+              {{ item.name }}
+            </template>
+            <template #responsibility>
+              Responsibility : {{ item.responsibility }}
+            </template>
+          </ExperienceTimeLine>
+        </div>
+
+    
       </div>
-    </section>
+      <Modal :isModalOpen="openModal" @close="openModal = false" :projectId="selectedProjectId" />
+     
+       
+        
+
+
+    </div>
+
+
+
   </div>
 </template>
 

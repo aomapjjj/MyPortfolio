@@ -15,7 +15,7 @@ import Instragram from "@/components/icons/Instragram.vue"
     />
   </div>
   <div class="flex justify-center px-5 -mt-16">
-    <img class="w-40 bg-white p-2 rounded-full" src="/img/AomZa.jpg" alt="" />
+    <img class="w-40 bg-white p-2 rounded-full" src="/img/Aom.png" alt="" />
   </div>
   <div>
     <div class="text-center px-10">

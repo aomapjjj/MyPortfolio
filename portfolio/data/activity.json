@@ -1,0 +1,37 @@
+[
+    {
+        "img":"/img/Activities/java.png",
+        "name":"Java Game Programming” อบรม New Skill นักศึกษาใหม่ SIT",
+        "description":"The workshop aims to provide knowledge and principles of object-oriented programming. Additionally, it offers participants and student assistants the opportunity to practice and learn basic programming methods through games.",
+        "date":"07/06/2023-09/06/2023",
+        "website":"https://www.sit.kmutt.ac.th/blog/news_and_activities/java-game-programming-%E0%B8%AD%E0%B8%9A%E0%B8%A3%E0%B8%A1-new-skill-%E0%B8%99%E0%B8%B1%E0%B8%81%E0%B8%A8%E0%B8%B6%E0%B8%81%E0%B8%A9%E0%B8%B2%E0%B9%83%E0%B8%AB%E0%B8%A1%E0%B9%88-sit/"
+    },
+    {
+        "img":"/img/Activities/node.png",
+        "name":"Web Application “Basic Node.js” Workshop",
+        "description":"This workshop is organized to provide students with knowledge and fundamental principles of using Node.js. It aims to enable students to apply Node.js and further develop their skills in web application development appropriately.",
+        "date":"28/06/2023-29/06/2023",
+        "website":"https://www.sit.kmutt.ac.th/blog/news_and_activities/node-js-%E0%B9%80%E0%B8%84%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B8%A2%E0%B8%AD%E0%B8%94%E0%B8%AE%E0%B8%B4%E0%B8%95%E0%B9%83%E0%B8%99%E0%B8%AA%E0%B8%B2%E0%B8%A2/"
+    },
+    {
+        "img":"/img/Activities/ux.png",
+        "name":"Digital Experience Strategy",
+        "description":"UX Association Co., Ltd. is providing knowledge for this extracurricular training, which is organized as a long-term workshop held on Saturdays and Sundays for a period of 11 weeks, The purpose is to allow students to participate in hands-on workshops with UX Design experts, create positive experiences in using digital tools through project work",
+        "date":"11/06/2023-02/09/2023",
+        "website":"https://www.sit.kmutt.ac.th/blog/news_and_activities/ux-workshop-%E0%B8%AD%E0%B8%AD%E0%B8%81%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%A1%E0%B8%B2%E0%B8%81%E0%B8%81%E0%B8%A7%E0%B9%88%E0%B8%B2%E0%B9%81%E0%B8%84%E0%B9%88%E0%B8%AD/"
+    },
+    {
+        "img":"/img/Activities/valunteer.JPG",
+        "name":"SIT R-SA EP01 @ Kanchanaburi",
+        "description":"The Student Club of the Faculty of Information Technology is organizing an activity called SIT Volunteer Project, Episode 01 in Kanchanaburi (SIT R-SA EP01 @ Kanchanaburi) at Ban Nong Wai School, Nong Krang Subdistrict, Bo Phloi District, Kanchanaburi Province. The objectives are to instill a volunteer spirit and selflessness for the common good, as well as to develop teamwork skills and problem-solving skills of students.",
+        "date":"04/05/2024-06/05/2024",
+        "website":"https://www.sit.kmutt.ac.th/blog/news_and_activities/sit-r-sa-ep01-kanchanaburi-%E0%B9%82%E0%B8%A3%E0%B8%87%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%AB%E0%B8%99%E0%B8%AD%E0%B8%87%E0%B8%AB%E0%B8%A7%E0%B8%B2/"
+    },
+    {
+        "img":"/img/Activities/sit.png",
+        "name":"SIT Origin# 1",
+        "description":"SIT Origin#1 is a project aimed at building relationships among first-year students from the Information Technology (IT) program, Computer Science program (English curriculum) (CS), and Digital Service Innovation program (DSI). Additionally, it serves to strengthen the bond between senior and junior students within the SIT faculty. The event activities include station-based activities and a Web Kitchen activity, which simulates the workings of Web Architecture.",
+        "date":"13/07/2024",
+        "website":"https://www.sit.kmutt.ac.th/blog/news_and_activities/sit-origin-1-%E0%B8%95%E0%B9%89%E0%B8%AD%E0%B8%99%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%99%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B9%83%E0%B8%AB%E0%B8%A1%E0%B9%88-sit/"
+    }
+]

@@ -16,6 +16,9 @@ import ButtonNav from "./ButtonNav.vue"
         <RouterLink to="/about">
           <ButtonNav> ABOUT </ButtonNav>
         </RouterLink>
+        <RouterLink to="/activity">
+          <ButtonNav> ACTIVITIES </ButtonNav>
+        </RouterLink>
         <RouterLink to="/experience">
         <ButtonNav> EXPERIENCE </ButtonNav>
         </RouterLink>
